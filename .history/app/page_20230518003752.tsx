@@ -6,9 +6,7 @@ export default function Home() {
       <div className="bg-white/25 mx-24 w-full rounded-lg p-12">
         <div className="flex justify-between">
           <Input />
-          <div className="flex-1">
-            <h1>Weather</h1>
-          </div>
+          <h1>Weather</h1>
         </div>
       </div>
     </div>
