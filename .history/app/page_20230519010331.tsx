@@ -43,6 +43,7 @@ export default function Home() {
         </div>
 
         {/* CURRENT WEATHER SECTION */}
+        {error ? <span>hi</span> : <div>{data.location ? <h1>{data.location.name}</h1> : null}</div>}
       </div>
     </div>
   );

@@ -11,6 +11,7 @@ const Input = ({ handleSearch, setLocation, location }) => {
         placeholder="Search"
         onKeyDown={handleSearch}
         onChange={(e) => setLocation(e.target.value)}
+        value={location}
       />
       <div className="ml-[-25px] text-white cursor-pointer">
         <SearchIcon />

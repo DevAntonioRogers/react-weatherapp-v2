@@ -16,7 +16,6 @@ export default function Home() {
 
   const handleSearch = async (e) => {
     if (e.key === "Enter") {
-      e.preventDefault();
       try {
         const response = await fetch(url);
         if (!response.ok) {
@@ -43,6 +42,7 @@ export default function Home() {
         </div>
 
         {/* CURRENT WEATHER SECTION */}
+        <div>{data.location ? <h1>{data.location.name}</h1> : null}</div>
       </div>
     </div>
   );

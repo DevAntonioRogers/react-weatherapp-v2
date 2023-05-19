@@ -11,12 +11,10 @@ export default function Home() {
   const [location, setLocation] = useState("");
   const [error, setError] = useState("");
 
-  const url = `http://api.weatherapi.com/v1/forecast.json?key=538023bd3c43455084733202231905&q=${location}&days=7&aqi=yes&alerts=yes
-  `;
+  const url = `http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${location}&days=7&aqi=yes&alerts=yes`;
 
   const handleSearch = async (e) => {
     if (e.key === "Enter") {
-      e.preventDefault();
       try {
         const response = await fetch(url);
         if (!response.ok) {
@@ -43,6 +41,8 @@ export default function Home() {
         </div>
 
         {/* CURRENT WEATHER SECTION */}
+        <div>{data.location ? <h1>{data.location.name}</h1> : null}</div>
+        <Current />
       </div>
     </div>
   );

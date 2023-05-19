@@ -11,12 +11,10 @@ export default function Home() {
   const [location, setLocation] = useState("");
   const [error, setError] = useState("");
 
-  const url = `http://api.weatherapi.com/v1/forecast.json?key=538023bd3c43455084733202231905&q=${location}&days=7&aqi=yes&alerts=yes
-  `;
+  const url = `http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${location}&days=7&aqi=yes&alerts=yes`;
 
   const handleSearch = async (e) => {
     if (e.key === "Enter") {
-      e.preventDefault();
       try {
         const response = await fetch(url);
         if (!response.ok) {
@@ -38,11 +36,13 @@ export default function Home() {
       <div className="bg-white/25 mx-24 w-full rounded-lg p-12 flex flex-col">
         {/* SEARCH AND DEGREE CONVERSION */}
         <div className="flex justify-between items-center">
-          <Input handleSearch={handleSearch} location={location} setLocation={setLocation} />
+          <Input />
           <Conversion />
         </div>
 
         {/* CURRENT WEATHER SECTION */}
+        <
+        <Current />
       </div>
     </div>
   );
