@@ -24,7 +24,7 @@ const Current = ({ data }) => {
             <span>°</span>
           </p>
         ) : null}
-        {data.current ? <span className="text-white">{data.current.condition.text}</span> : null}
+        {data.current ? <span className="">{data.current.condition.text}</span> : null}
       </div>
       <div>
         {data.location ? (

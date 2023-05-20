@@ -45,7 +45,7 @@ export default function Home() {
         </div>
 
         {/* CURRENT WEATHER SECTION + 7 DAY FORECAST */}
-        <div className="flex p-12 items-center justify-between">
+        <div className="flex p-12 items-center justify-between underline">
           <Current data={data} />
           <WeekForecast data={data} />
         </div>

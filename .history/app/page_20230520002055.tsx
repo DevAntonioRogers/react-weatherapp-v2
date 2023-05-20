@@ -6,7 +6,6 @@ import Input from "./components/Input";
 
 import { useState } from "react";
 import WeekForecast from "./components/WeekForecast";
-import WeatherDetails from "./components/WeatherDetails";
 
 export default function Home() {
   const [data, setData] = useState({});
@@ -44,15 +43,10 @@ export default function Home() {
           <Conversion />
         </div>
 
-        {/* CURRENT WEATHER SECTION + 7 DAY FORECAST */}
-        <div className="flex p-12 items-center justify-between">
+        {/* CURRENT WEATHER SECTION */}
+        <div className="flex p-12 items-center justify-between border-b-white/90">
           <Current data={data} />
           <WeekForecast data={data} />
-        </div>
-
-        {/* WEATHER DETAILS */}
-        <div>
-          <WeatherDetails />
         </div>
       </div>
     </div>

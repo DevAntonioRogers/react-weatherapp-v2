@@ -7,13 +7,13 @@ const Current = ({ data }) => {
   return (
     <div className="flex flex-col items-start gap-2 ">
       <div className="flex items-center">
-        <div className="">
+        <div className="text-center">
           <h1 className="text-3xl text-white">Today</h1>
           <p className="text-white">{currentDate}</p>
         </div>
         {weatherIcon && (
           <div>
-            <img className="w-[50px] object-cover" src={weatherIcon} alt="Weather Icon" />
+            <img className="w-[90px] object-cover" src={weatherIcon} alt="Weather Icon" />
           </div>
         )}
       </div>
@@ -24,7 +24,7 @@ const Current = ({ data }) => {
             <span>°</span>
           </p>
         ) : null}
-        {data.current ? <span className="text-white">{data.current.condition.text}</span> : null}
+        {data.current ? <span className="text-2xl">{data.current.condition.text}</span> : null}
       </div>
       <div>
         {data.location ? (

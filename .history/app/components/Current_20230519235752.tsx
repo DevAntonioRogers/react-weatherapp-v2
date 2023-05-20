@@ -5,15 +5,15 @@ const Current = ({ data }) => {
   const weatherIcon = data.current ? data.current.condition.icon : null;
   const currentDate = getCurrentDate();
   return (
-    <div className="flex flex-col items-start gap-2 ">
+    <div className="flex flex-col items-center">
       <div className="flex items-center">
-        <div className="">
+        <div className="text-center">
           <h1 className="text-3xl text-white">Today</h1>
           <p className="text-white">{currentDate}</p>
         </div>
         {weatherIcon && (
           <div>
-            <img className="w-[50px] object-cover" src={weatherIcon} alt="Weather Icon" />
+            <img className="w-[90px] object-cover" src={weatherIcon} alt="Weather Icon" />
           </div>
         )}
       </div>
@@ -24,11 +24,11 @@ const Current = ({ data }) => {
             <span>°</span>
           </p>
         ) : null}
-        {data.current ? <span className="text-white">{data.current.condition.text}</span> : null}
+        {data.current ? <span>{data.current.condition.text}</span> : null}
       </div>
       <div>
         {data.location ? (
-          <div className="flex items-center text-black bg-white/90 px-2 py-2 rounded-xl">
+          <div className="flex items-center text-white bg-white/90">
             <LocationOnIcon />
             <span>
               {data.location.name}, {data.location.region}

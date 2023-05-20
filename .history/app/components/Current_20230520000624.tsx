@@ -13,7 +13,7 @@ const Current = ({ data }) => {
         </div>
         {weatherIcon && (
           <div>
-            <img className="w-[50px] object-cover" src={weatherIcon} alt="Weather Icon" />
+            <img className="w-[90px] object-cover" src={weatherIcon} alt="Weather Icon" />
           </div>
         )}
       </div>
@@ -24,7 +24,7 @@ const Current = ({ data }) => {
             <span>°</span>
           </p>
         ) : null}
-        {data.current ? <span className="text-white">{data.current.condition.text}</span> : null}
+        {data.current ? <span className="">{data.current.condition.text}</span> : null}
       </div>
       <div>
         {data.location ? (
