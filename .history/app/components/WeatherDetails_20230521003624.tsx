@@ -30,10 +30,10 @@ const WeatherDetails = ({ data }) => {
             <div className="bg-white/50 flex p-4 items-center justify-center gap-6">
               <div className="text-2xl">
                 <h3>Wind Direction</h3>
-                <h3>{data.current.wind_dir}</h3>
+                <h3>{data.current.} mph</h3>
               </div>
               <div className="text-5xl">
-                <ExploreIcon fontSize="inherit" />
+                <AirIcon fontSize="inherit" />
               </div>
             </div>
             <div className="bg-white/50 flex p-4">

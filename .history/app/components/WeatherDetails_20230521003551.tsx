@@ -27,13 +27,13 @@ const WeatherDetails = ({ data }) => {
                 <OpacityIcon fontSize="inherit" />
               </div>
             </div>
-            <div className="bg-white/50 flex p-4 items-center justify-center gap-6">
+            <div className="bg-white/50 flex p-4">
               <div className="text-2xl">
-                <h3>Wind Direction</h3>
-                <h3>{data.current.wind_dir}</h3>
+                <h3>Wind</h3>
+                <h3>17 km/h</h3>
               </div>
-              <div className="text-5xl">
-                <ExploreIcon fontSize="inherit" />
+              <div className="text-white text-3xl">
+                <AirIcon />
               </div>
             </div>
             <div className="bg-white/50 flex p-4">
