@@ -9,8 +9,8 @@ const WeatherDetails = ({ data }) => {
           <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <div className="bg-white/50 flex p-4 items-center justify-center gap-6">
               <div className="text-2xl">
-                <h3>Wind Speed</h3>
-                <h3>{data.current.wind_mph} mph</h3>
+                <h3>Wind</h3>
+                <h3>17 km/h</h3>
               </div>
               <div className="text-5xl">
                 <AirIcon fontSize="inherit" />

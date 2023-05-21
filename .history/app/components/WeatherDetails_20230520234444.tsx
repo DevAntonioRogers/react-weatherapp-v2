@@ -16,6 +16,7 @@ const WeatherDetails = ({ data }) => {
                 <AirIcon fontSize="inherit" />
               </div>
             </div>
+
             <div className="bg-white/50 flex p-4">
               <div className="text-2xl">
                 <h3>Wind</h3>

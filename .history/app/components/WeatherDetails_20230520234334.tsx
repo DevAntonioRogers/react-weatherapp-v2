@@ -7,15 +7,17 @@ const WeatherDetails = ({ data }) => {
           <h1 className="mb-4 text-2xl text-white">Weather Details</h1>
 
           <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <div className="bg-white/50 flex p-4 items-center justify-center gap-6">
-              <div className="text-2xl">
-                <h3>Wind Speed</h3>
-                <h3>{data.current.wind_mph} mph</h3>
+            {data.current ? (
+              <div className="bg-white/50 flex p-4 items-center justify-center gap-6">
+                <div className="text-2xl">
+                  <h3>Wind Speed</h3>
+                  <h3>{data.current.wind_mph} mph</h3>
+                </div>
+                <div className="text-5xl">
+                  <AirIcon fontSize="inherit" />
+                </div>
               </div>
-              <div className="text-5xl">
-                <AirIcon fontSize="inherit" />
-              </div>
-            </div>
+            ) : null}
             <div className="bg-white/50 flex p-4">
               <div className="text-2xl">
                 <h3>Wind</h3>
