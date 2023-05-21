@@ -40,7 +40,7 @@ export default function Home() {
         {/* SEARCH AND DEGREE CONVERSION */}
         <div className="flex flex-col md:flex-row justify-between items-center p-12">
           <Input handleSearch={handleSearch} location={location} setLocation={setLocation} />
-          <h1 className="mb-8 md:mb-0 order-1 bg-white/50 text-2xl py-2 px-4 rounded-xl">Weather App</h1>
+          <h1 className="mb-8 md:mb-0 order-2 bg-white/50 text-2xl py-2 px-4 rounded-xl">Weather App</h1>
         </div>
 
         {/* CURRENT WEATHER SECTION + 7 DAY FORECAST */}

@@ -1,5 +1,6 @@
 "use client";
 
+import Conversion from "./components/Conversion";
 import Current from "./components/Current";
 import Input from "./components/Input";
 
@@ -35,12 +36,12 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-cover bg-gradient-to-r from-blue-500 to-blue-300">
-      <div className="bg-white/25 w-full rounded-lg flex flex-col h-fit">
+    <div className=" justify-center  bg-cover bg-gradient-to-r from-blue-500 to-blue-300">
+      <div className="bg-white/25 mx-24 w-[300px] rounded-lg flex flex-col h-fit">
         {/* SEARCH AND DEGREE CONVERSION */}
-        <div className="flex flex-col md:flex-row justify-between items-center p-12">
+        <div className="flex justify-between items-center p-12">
           <Input handleSearch={handleSearch} location={location} setLocation={setLocation} />
-          <h1 className="mb-8 md:mb-0 order-1 bg-white/50 text-2xl py-2 px-4 rounded-xl">Weather App</h1>
+          <Conversion />
         </div>
 
         {/* CURRENT WEATHER SECTION + 7 DAY FORECAST */}

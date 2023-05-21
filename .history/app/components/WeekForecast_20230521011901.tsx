@@ -1,6 +1,6 @@
 const WeekForecast = ({ data }) => {
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 w-full">
+    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6 w-full">
       {data.forecast
         ? data.forecast.forecastday.map((day, index) => (
             <div key={index} className="bg-white/40 p-2 text-center rounded-lg flex flex-col items-center ">

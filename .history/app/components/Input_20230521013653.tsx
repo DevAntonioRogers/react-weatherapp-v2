@@ -4,7 +4,7 @@ import SearchIcon from "@mui/icons-material/Search";
 
 const Input = ({ handleSearch, setLocation, location }) => {
   return (
-    <form className="flex items-center md:w-2/4 w-full order-2 md:order-1">
+    <form className="flex items-center md:w-2/4 w-full mb-8 md:mb-0">
       <input
         type="text"
         className="w-full bg-transparent border-b-2 placeholder-white outline-none text-white"

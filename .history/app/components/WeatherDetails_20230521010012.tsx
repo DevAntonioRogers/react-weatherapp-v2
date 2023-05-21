@@ -3,7 +3,6 @@ import { GiWindSlap, GiCompass } from "react-icons/gi";
 import { WiHumidity } from "react-icons/wi";
 import { MdAir } from "react-icons/md";
 import { CiTempHigh } from "react-icons/ci";
-import { FaEye } from "react-icons/fa";
 const WeatherDetails = ({ data }) => {
   return (
     <>
@@ -75,13 +74,13 @@ const WeatherDetails = ({ data }) => {
                 <CiTempHigh fontSize={40} />
               </div>
             </div>
-            <div className="bg-white/50 flex p-4 items-center justify-center gap-6 rounded-xl">
+            <div className="bg-white/50 flex p-4">
               <div className="text-2xl">
-                <h3>Visibility</h3>
-                <h3>{data.current.vis_km}km</h3>
+                <h3>Vis</h3>
+                <h3>17 km/h</h3>
               </div>
-              <div className="text-3xl">
-                <FaEye fontSize={40} />
+              <div className="text-white text-3xl">
+                <MdAir />
               </div>
             </div>
           </div>

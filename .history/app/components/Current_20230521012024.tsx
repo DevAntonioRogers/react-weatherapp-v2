@@ -5,7 +5,7 @@ const Current = ({ data }) => {
   const weatherIcon = data.current ? data.current.condition.icon : null;
   const currentDate = getCurrentDate();
   return (
-    <div className="flex flex-col mb-8 md:mb-0 items-start gap-2 w-1/2">
+    <div className="flex flex-col items-start gap-2 ">
       <div className="flex items-center">
         <div className="">
           <h1 className="text-3xl text-white">Today</h1>

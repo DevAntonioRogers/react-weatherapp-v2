@@ -1,9 +1,9 @@
+import AirIcon from "@mui/icons-material/Air";
+import OpacityIcon from "@mui/icons-material/Opacity";
+import ExploreIcon from "@mui/icons-material/Explore";
 import { BsSunrise, BsSunset } from "react-icons/bs";
 import { GiWindSlap, GiCompass } from "react-icons/gi";
 import { WiHumidity } from "react-icons/wi";
-import { MdAir } from "react-icons/md";
-import { CiTempHigh } from "react-icons/ci";
-import { FaEye } from "react-icons/fa";
 const WeatherDetails = ({ data }) => {
   return (
     <>
@@ -21,7 +21,7 @@ const WeatherDetails = ({ data }) => {
                 <GiWindSlap fontSize={40} />
               </div>
             </div>
-            <div className="bg-white/50 flex p-4 items-center justify-center gap-6 rounded-xl">
+            <div className="bg-white/50 flex p-4 items-center justify-center gap-6">
               <div className="text-2xl">
                 <h3>Humidity</h3>
                 <h3>{data.current.humidity}%</h3>
@@ -30,7 +30,7 @@ const WeatherDetails = ({ data }) => {
                 <WiHumidity fontSize={40} />
               </div>
             </div>
-            <div className="bg-white/50 flex p-4 items-center justify-center gap-6 rounded-xl">
+            <div className="bg-white/50 flex p-4 items-center justify-center gap-6">
               <div className="text-2xl">
                 <h3>Wind Direction</h3>
                 <h3>{data.current.wind_dir}</h3>
@@ -39,7 +39,7 @@ const WeatherDetails = ({ data }) => {
                 <GiCompass fontSize={40} />
               </div>
             </div>
-            <div className="bg-white/50 flex p-4 items-center justify-center gap-6 rounded-xl">
+            <div className="bg-white/50 flex p-4 items-center justify-center gap-6">
               <div className="text-2xl">
                 <h3>Sunrise</h3>
                 <h3>{data.forecast.forecastday[0].astro.sunrise}</h3>
@@ -48,7 +48,7 @@ const WeatherDetails = ({ data }) => {
                 <BsSunrise fontSize={40} />
               </div>
             </div>
-            <div className="bg-white/50 flex p-4 items-center justify-center gap-6 rounded-xl">
+            <div className="bg-white/50 flex p-4 items-center justify-center gap-6">
               <div className="text-2xl">
                 <h3>Sunset</h3>
                 <h3>{data.forecast.forecastday[0].astro.sunset}</h3>
@@ -57,31 +57,31 @@ const WeatherDetails = ({ data }) => {
                 <BsSunset fontSize={40} />
               </div>
             </div>
-            <div className="bg-white/50 flex p-4 items-center justify-center gap-6 rounded-xl">
+            <div className="bg-white/50 flex p-4">
               <div className="text-2xl">
-                <h3>Air Pressure</h3>
-                <h3>{data.current.pressure_mb} hPa</h3>
+                <h3>Wind</h3>
+                <h3>17 km/h</h3>
               </div>
-              <div className="text-3xl">
-                <MdAir fontSize={40} />
+              <div className="text-white text-3xl">
+                <AirIcon />
               </div>
             </div>
-            <div className="bg-white/50 flex p-4 items-center justify-center gap-6 rounded-xl">
+            <div className="bg-white/50 flex p-4">
               <div className="text-2xl">
-                <h3>Feels Like</h3>
-                <h3>{data.current.feelslike_f}°</h3>
+                <h3>Wind</h3>
+                <h3>17 km/h</h3>
               </div>
-              <div className="text-3xl">
-                <CiTempHigh fontSize={40} />
+              <div className="text-white text-3xl">
+                <AirIcon />
               </div>
             </div>
-            <div className="bg-white/50 flex p-4 items-center justify-center gap-6 rounded-xl">
+            <div className="bg-white/50 flex p-4">
               <div className="text-2xl">
-                <h3>Visibility</h3>
-                <h3>{data.current.vis_km}km</h3>
+                <h3>Wind</h3>
+                <h3>17 km/h</h3>
               </div>
-              <div className="text-3xl">
-                <FaEye fontSize={40} />
+              <div className="text-white text-3xl">
+                <AirIcon />
               </div>
             </div>
           </div>
