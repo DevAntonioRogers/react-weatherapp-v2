@@ -1,5 +1,5 @@
 import AirIcon from "@mui/icons-material/Air";
-const WeatherDetails = ({ data }) => {
+const WeatherDetails = () => {
   return (
     <div className="p-12">
       <h1 className="mb-4 text-2xl text-white">Weather Details</h1>

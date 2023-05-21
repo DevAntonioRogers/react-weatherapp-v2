@@ -36,7 +36,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex justify-center p-2 bg-cover bg-gradient-to-r from-blue-500 to-blue-300">
+    <div className="flex justify-center p-2 bg-cover h-screen bg-gradient-to-r from-blue-500 to-blue-300 overflow-x-scroll">
       <div className="bg-white/25 mx-24 w-full rounded-lg flex flex-col h-fit">
         {/* SEARCH AND DEGREE CONVERSION */}
         <div className="flex justify-between items-center p-12">
@@ -52,7 +52,7 @@ export default function Home() {
 
         {/* WEATHER DETAILS */}
         <div>
-          <WeatherDetails data={data} />
+          <WeatherDetails />
         </div>
       </div>
     </div>

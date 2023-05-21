@@ -1,0 +1,19 @@
+const WeatherDetails = () => {
+  return (
+    <div>
+      <h1>Weather Details</h1>
+
+      <div className=" grid grid-cols-[200px_minmax(900px,_1fr)_100px]">
+        <div>
+          <div>
+            <h3>Wind</h3>
+            <h3>17 km/h</h3>
+          </div>
+          <img src="" alt="" />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default WeatherDetails;

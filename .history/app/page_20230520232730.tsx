@@ -52,7 +52,7 @@ export default function Home() {
 
         {/* WEATHER DETAILS */}
         <div>
-          <WeatherDetails data={data} />
+          <WeatherDetails />
         </div>
       </div>
     </div>
