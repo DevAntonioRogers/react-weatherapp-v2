@@ -9,7 +9,6 @@ interface DayForecast {
     mintemp_f: number;
   };
 }
-
 interface WeekForecastProps {
   data: {
     forecast?: {

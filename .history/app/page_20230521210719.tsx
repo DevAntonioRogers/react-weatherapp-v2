@@ -34,14 +34,14 @@ export default function Home() {
   let content;
   if (Object.keys(data).length === 0 && error === "") {
     content = (
-      <div className="text-white text-center h-screen mt-[5rem]">
+      <div className="text-white text-center h-screen">
         <h2 className="text-3xl font-semibold mb-4">Welcome to the Weather App</h2>
         <p className="text-xl">Enter a city name to get the weather forecast</p>
       </div>
     );
   } else if (error !== "") {
     content = (
-      <div className="text-white text-center h-screen mt-[5rem]">
+      <div className="text-white text-center h-screen">
         <h2 className="text-3xl font-semibold mb-4">City not found</h2>
         <p className="text-xl">Please enter a valid city name</p>
       </div>
@@ -64,9 +64,9 @@ export default function Home() {
     <div className="bg-cover bg-gradient-to-r from-blue-500 to-blue-300 h-fit">
       <div className="bg-white/25 w-full rounded-lg flex flex-col h-fit">
         <div className="flex flex-col md:flex-row justify-between items-center p-12">
-          <Input handleSearch={handleSearch} setLocation={setLocation} />
-          <h1 className="mb-8 md:mb-0 order-1 text-white text-2xl py-2 px-4 rounded-xl italic font-bold">
-            Weather App.
+          <Input handleSearch={handleSearch} location={location} setLocation={setLocation} />
+          <h1 className="mb-8 md:mb-0 order-1 bg-white/50 text-2xl py-2 px-4 rounded-xl italic font-bold">
+            Weather App
           </h1>
         </div>
         {content}

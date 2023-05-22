@@ -1,12 +1,14 @@
 "use client";
+
 import SearchIcon from "@mui/icons-material/Search";
 
 interface InputProps {
   handleSearch: (event: React.KeyboardEvent<HTMLInputElement>) => void;
   setLocation: React.Dispatch<React.SetStateAction<string>>;
+  location: string;
 }
 
-const Input = ({ handleSearch, setLocation }: InputProps) => {
+const Input = ({ handleSearch, setLocation, location }) => {
   return (
     <form className="flex items-center md:w-2/4 w-full order-2 md:order-1">
       <input

@@ -34,14 +34,14 @@ export default function Home() {
   let content;
   if (Object.keys(data).length === 0 && error === "") {
     content = (
-      <div className="text-white text-center h-screen mt-[5rem]">
+      <div className="text-white text-center h-screen">
         <h2 className="text-3xl font-semibold mb-4">Welcome to the Weather App</h2>
         <p className="text-xl">Enter a city name to get the weather forecast</p>
       </div>
     );
   } else if (error !== "") {
     content = (
-      <div className="text-white text-center h-screen mt-[5rem]">
+      <div className="text-white text-center h-screen mt-[40rem]">
         <h2 className="text-3xl font-semibold mb-4">City not found</h2>
         <p className="text-xl">Please enter a valid city name</p>
       </div>

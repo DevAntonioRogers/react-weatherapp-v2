@@ -16,12 +16,12 @@ interface WeatherDetailsProps {
       vis_km: number;
     };
     forecast?: {
-      forecastday: {
-        astro: {
+      forecastday: [
+        astro?: {
           sunrise: string;
           sunset: string;
-        };
-      }[];
+        }
+      ];
     };
   };
 }
@@ -64,7 +64,7 @@ const WeatherDetails = ({ data }: WeatherDetailsProps) => {
             <div className="bg-white/50 flex p-4 items-center justify-center gap-6 rounded-xl">
               <div className="text-2xl">
                 <h3>Sunrise</h3>
-                <h3>{data.forecast?.forecastday[0]?.astro.sunrise}</h3>
+                <h3>{data.forecast.forecastday[0].astro.sunrise}</h3>
               </div>
               <div className="text-3xl">
                 <BsSunrise fontSize={40} />
@@ -73,7 +73,7 @@ const WeatherDetails = ({ data }: WeatherDetailsProps) => {
             <div className="bg-white/50 flex p-4 items-center justify-center gap-6 rounded-xl">
               <div className="text-2xl">
                 <h3>Sunset</h3>
-                <h3>{data.forecast?.forecastday[0]?.astro.sunset}</h3>
+                <h3>{data.forecast.forecastday[0].astro.sunset}</h3>
               </div>
               <div className="text-3xl">
                 <BsSunset fontSize={40} />
