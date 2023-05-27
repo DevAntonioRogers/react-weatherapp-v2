@@ -20,13 +20,18 @@ interface WeekForecastProps {
 
 const WeekForecast = ({ data }: WeekForecastProps) => {
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 w-full">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 w-full">
       {data.forecast
         ? data.forecast.forecastday.map((day, index) => (
-            <div key={index} className="bg-white/40 p-2 text-center rounded-lg flex flex-col items-center font-bold">
-              <p>{new Date(day.date).toLocaleString("en-US", { weekday: "short" })}</p>
-              <img className="w-50 h-50" src={day.day.condition.icon} alt={day.day.condition.text} />
-              <div>
+            <div
+              key={index}
+              className="bg-white/40 p-2 text-center rounded-lg flex  items-center italic font-bold gap-1 justify-center"
+            >
+              <p className="text-3xl md:text-base">
+                {new Date(day.date).toLocaleString("en-US", { weekday: "short" })}
+              </p>
+              <img className="w-20 h-20" src={day.day.condition.icon} alt={day.day.condition.text} />
+              <div className="flex gap-2">
                 <p>H {day.day.maxtemp_f.toFixed()}°</p>
                 <p>L {day.day.mintemp_f.toFixed()}°</p>
               </div>

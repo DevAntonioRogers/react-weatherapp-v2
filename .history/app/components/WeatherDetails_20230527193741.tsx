@@ -1,3 +1,10 @@
+import { BsSunrise, BsSunset } from "react-icons/bs";
+import { GiWindSlap, GiCompass } from "react-icons/gi";
+import { WiHumidity } from "react-icons/wi";
+import { MdAir } from "react-icons/md";
+import { CiTempHigh } from "react-icons/ci";
+import { FaEye } from "react-icons/fa";
+
 interface WeatherDetailsProps {
   data: {
     current?: {
