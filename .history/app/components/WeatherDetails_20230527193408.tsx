@@ -31,7 +31,7 @@ const WeatherDetails = ({ data }: WeatherDetailsProps) => {
     <>
       {data.current ? (
         <div className="p-12">
-          <h1 className="mb-4 text-2xl text-white italic font-bold">Weather Details</h1>
+          <h1 className="mb-4 text-2xl text-white">Weather Details</h1>
 
           <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-center italic font-bold">
             <div className="bg-white/50 flex p-4 items-center justify-center gap-6 rounded-xl">
@@ -59,6 +59,9 @@ const WeatherDetails = ({ data }: WeatherDetailsProps) => {
                   {data.forecast?.forecastday[0]?.astro.sunrise}
                 </h3>
               </div>
+              <div className="text-3xl">
+                <BsSunrise fontSize={40} />
+              </div>
             </div>
             <div className="bg-white/50 flex p-4 items-center justify-center gap-6 rounded-xl">
               <div className="text-2xl">
@@ -67,11 +70,17 @@ const WeatherDetails = ({ data }: WeatherDetailsProps) => {
                   {data.forecast?.forecastday[0]?.astro.sunset}
                 </h3>
               </div>
+              <div className="text-3xl">
+                <BsSunset fontSize={40} />
+              </div>
             </div>
             <div className="bg-white/50 flex p-4 items-center justify-center gap-6 rounded-xl">
               <div className="text-2xl">
                 <h3>Air Pressure</h3>
                 <h3 className="text-white bg-black/25 rounded-xl mt-1">{data.current.pressure_mb} hPa</h3>
+              </div>
+              <div className="text-3xl">
+                <MdAir fontSize={40} />
               </div>
             </div>
             <div className="bg-white/50 flex p-4 items-center justify-center gap-6 rounded-xl">
@@ -79,11 +88,17 @@ const WeatherDetails = ({ data }: WeatherDetailsProps) => {
                 <h3>Feels Like</h3>
                 <h3 className="text-white bg-black/25 rounded-xl mt-1">{data.current.feelslike_f}°</h3>
               </div>
+              <div className="text-3xl">
+                <CiTempHigh fontSize={40} />
+              </div>
             </div>
             <div className="bg-white/50 flex p-4 items-center justify-center gap-6 rounded-xl">
               <div className="text-2xl">
                 <h3>Visibility</h3>
                 <h3 className="text-white bg-black/25 rounded-xl mt-1">{data.current.vis_km}km</h3>
+              </div>
+              <div className="text-3xl">
+                <FaEye fontSize={40} />
               </div>
             </div>
           </div>

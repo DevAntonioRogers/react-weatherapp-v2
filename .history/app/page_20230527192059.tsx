@@ -49,7 +49,7 @@ export default function Home() {
   } else {
     content = (
       <>
-        <div className="flex md:flex-row flex-col p-12 items-center justify-between mt-[-4rem]">
+        <div className="flex md:flex-row flex-col p-12 items-center justify-between mt-[-5rem]">
           <Current data={data} />
           <WeekForecast data={data} />
         </div>
