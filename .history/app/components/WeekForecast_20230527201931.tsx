@@ -32,7 +32,7 @@ const WeekForecast = ({ data }: WeekForecastProps) => {
           role="group"
           aria-label={`Forecast for ${new Date(day.date).toLocaleString("en-US", { weekday: "short" })}`}
         >
-          <p className="italic text-2xl">{new Date(day.date).toLocaleString("en-US", { weekday: "short" })}</p>
+          <p>{new Date(day.date).toLocaleString("en-US", { weekday: "short" })}</p>
           <img
             className="w-50 h-50"
             src={day.day.condition.icon}

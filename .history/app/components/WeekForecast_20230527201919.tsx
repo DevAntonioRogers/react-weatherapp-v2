@@ -32,7 +32,7 @@ const WeekForecast = ({ data }: WeekForecastProps) => {
           role="group"
           aria-label={`Forecast for ${new Date(day.date).toLocaleString("en-US", { weekday: "short" })}`}
         >
-          <p className="italic text-2xl">{new Date(day.date).toLocaleString("en-US", { weekday: "short" })}</p>
+          <p>{new Date(day.date).toLocaleString("en-US", { weekday: "short" })}</p>
           <img
             className="w-50 h-50"
             src={day.day.condition.icon}
@@ -40,7 +40,7 @@ const WeekForecast = ({ data }: WeekForecastProps) => {
             aria-label={day.day.condition.text}
           />
           <div>
-            <p className="bg-black/25 px-2 italic rounded-xl text-white mb-2">
+            <p className="bg-black/25 px-2 italic rounded-xl text-white">
               High:{" "}
               <span aria-label={`Maximum temperature: ${day.day.maxtemp_f.toFixed()} degrees Fahrenheit`}>
                 {day.day.maxtemp_f.toFixed()}°
