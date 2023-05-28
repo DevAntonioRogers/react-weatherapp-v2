@@ -12,7 +12,7 @@ const Input = ({ handleSearch, setLocation }: InputProps) => {
       <input
         type="text"
         className="w-full rounded-sm p-1 outline-none text-black"
-        placeholder="Search..."
+        placeholder="Search"
         onKeyDown={handleSearch}
         onChange={(e) => setLocation(e.target.value)}
       />

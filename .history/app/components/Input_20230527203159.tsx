@@ -11,12 +11,12 @@ const Input = ({ handleSearch, setLocation }: InputProps) => {
     <form className="flex items-center md:w-2/4 w-full order-2 md:order-1">
       <input
         type="text"
-        className="w-full rounded-sm p-1 outline-none text-black"
-        placeholder="Search..."
+        className="w-full  border-b-2 placeholder-white outline-none text-black"
+        placeholder="Search"
         onKeyDown={handleSearch}
         onChange={(e) => setLocation(e.target.value)}
       />
-      <div className="ml-[-25px] text-black cursor-pointer">
+      <div className="ml-[-25px] text-white cursor-pointer">
         <SearchIcon />
       </div>
     </form>
