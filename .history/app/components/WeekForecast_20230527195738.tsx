@@ -28,7 +28,7 @@ const WeekForecast = ({ data }: WeekForecastProps) => {
       {data.forecast.forecastday.map((day, index) => (
         <div
           key={index}
-          className="bg-white/40 p-2 text-center rounded-lg flex flex-col items-center font-semibold gap-4"
+          className="bg-white/40 p-2 text-center rounded-lg flex flex-col items-center font-bold"
           role="group"
           aria-label={`Forecast for ${new Date(day.date).toLocaleString("en-US", { weekday: "short" })}`}
         >
@@ -39,7 +39,7 @@ const WeekForecast = ({ data }: WeekForecastProps) => {
             alt={day.day.condition.text}
             aria-label={day.day.condition.text}
           />
-          <div>
+          <div className="italic">
             <p>
               High:{" "}
               <span aria-label={`Maximum temperature: ${day.day.maxtemp_f.toFixed()} degrees Fahrenheit`}>
